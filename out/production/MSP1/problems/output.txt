@@ -1,0 +1,4 @@
+Meeting[0] = 0 Meeting[1] = 14 Meeting[2] = 10 Meeting[3] = 0 Meeting[4] = 12 Meeting[5] = 0 Meeting[6] = 5 Meeting[7] = 3 Meeting[8] = 8 Meeting[9] = 7 Latest Meeting = 14
+Meeting[0] = 0 Meeting[1] = 7 Meeting[2] = 11 Meeting[3] = 0 Meeting[4] = 9 Meeting[5] = 5 Meeting[6] = 13 Meeting[7] = 3 Meeting[8] = 8 Meeting[9] = 0 Latest Meeting = 13
+Meeting[0] = 0 Meeting[1] = 4 Meeting[2] = 10 Meeting[3] = 0 Meeting[4] = 12 Meeting[5] = 6 Meeting[6] = 2 Meeting[7] = 8 Meeting[8] = 12 Meeting[9] = 0 Latest Meeting = 12
+Model[MSP], 3 Solutions, MINIMIZE Latest Meeting = 12, Resolution time 0.417s, 948 Nodes (2,271.8 n/s), 1891 Backtracks, 0 Backjumps, 943 Fails, 0 Restarts

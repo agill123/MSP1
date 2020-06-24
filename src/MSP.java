@@ -20,7 +20,7 @@ public class MSP {
     // declare your constrained integer variables here
     //
     IntVar meeting_times[];
-    IntVar max;
+    IntVar latest_meeting;
 
     public MSP(int n, int m, int timeSlots, int[][] distance, int[][] attends){
         solution       = new int[n];
@@ -35,15 +35,15 @@ public class MSP {
         // make your constrained integer variables here
         //
         meeting_times = model.intVarArray("Meeting",n,0,timeSlots-1);
-        max=model.intVar("Max",0,999999);
-        span=model.intVar(1);
+        latest_meeting=model.intVar("Latest Meeting",0,timeSlots);
+        span=model.intVar("span",0,timeSlots);
 
         //
         // post your constraints here
         //
-        model.max(max,meeting_times).post();
-        //model.min(min,meeting_times).post();
-      //  timeRange = max.sub(min).intVar();
+        model.max(latest_meeting,meeting_times).post();
+
+
         //for every agent in attends
         for(int i=0;i<m;i++){
             //compare to find all their meetings
@@ -52,7 +52,11 @@ public class MSP {
                    //post arrival time constraint for every pair of meetings
                     //specify j less than k to prevent repeating
                     if(attends[i][j]==1 && attends[i][k]==1 && j<k){
-                        ( ((meeting_times[k].sub(meeting_times[j])).abs()).sub(span)).ge(distance[j][k]).post();
+                        //there is no >= for model.distance currently
+                        //since span is 1 can exclude it from expression for same result
+                        model.distance( meeting_times[k],meeting_times[j],">",distance[j][k]).post();
+
+
                     }
                 }
             }
@@ -66,12 +70,13 @@ public class MSP {
 
     void optimize(){
        //objective function
-        model.setObjective(Model.MINIMIZE,max);
+        model.setObjective(Model.MINIMIZE,latest_meeting);
         while (solver.solve()) {
             for (int i = 0; i < n; i++) {
                 System.out.print(meeting_times[i] + " ");
+
             }
-            System.out.println();
+            System.out.println(latest_meeting);
         }
 
 
@@ -83,7 +88,7 @@ public class MSP {
             for (int i = 0; i < n; i++) {
                 System.out.println(meeting_times[i] + " ");
             }
-            System.out.println(max);
+            System.out.println(latest_meeting);
 
         }
     }

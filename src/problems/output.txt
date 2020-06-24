@@ -1,0 +1,7 @@
+Meeting[0] = 17 Meeting[1] = 17 Meeting[2] = 14 Meeting[3] = 17 Meeting[4] = 8 Meeting[5] = 11 Meeting[6] = 3 Meeting[7] = 5 Meeting[8] = 8 Meeting[9] = 1 Latest Meeting = 17
+Meeting[0] = 16 Meeting[1] = 16 Meeting[2] = 13 Meeting[3] = 16 Meeting[4] = 7 Meeting[5] = 10 Meeting[6] = 2 Meeting[7] = 4 Meeting[8] = 7 Meeting[9] = 0 Latest Meeting = 16
+Meeting[0] = 15 Meeting[1] = 15 Meeting[2] = 12 Meeting[3] = 15 Meeting[4] = 3 Meeting[5] = 9 Meeting[6] = 5 Meeting[7] = 7 Meeting[8] = 2 Meeting[9] = 0 Latest Meeting = 15
+Meeting[0] = 14 Meeting[1] = 14 Meeting[2] = 11 Meeting[3] = 14 Meeting[4] = 9 Meeting[5] = 6 Meeting[6] = 2 Meeting[7] = 4 Meeting[8] = 9 Meeting[9] = 0 Latest Meeting = 14
+Meeting[0] = 13 Meeting[1] = 6 Meeting[2] = 10 Meeting[3] = 13 Meeting[4] = 8 Meeting[5] = 4 Meeting[6] = 0 Meeting[7] = 2 Meeting[8] = 8 Meeting[9] = 13 Latest Meeting = 13
+Meeting[0] = 12 Meeting[1] = 2 Meeting[2] = 8 Meeting[3] = 12 Meeting[4] = 0 Meeting[5] = 4 Meeting[6] = 10 Meeting[7] = 6 Meeting[8] = 1 Meeting[9] = 12 Latest Meeting = 12
+Model[MSP], 6 Solutions, MINIMIZE Latest Meeting = 12, Resolution time 0.183s, 748 Nodes (4,079.7 n/s), 1485 Backtracks, 0 Backjumps, 737 Fails, 0 Restarts
